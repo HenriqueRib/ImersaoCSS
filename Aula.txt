@@ -1,0 +1,7 @@
+Aula 1: CSS para Página Pessoal
+
+Organizar o texto CSS em forma alfabetica, Uma boa pratica
+background-size: auto 100vh; // vh 100 porcento absoluto
+https://codepen.io/felipedotcom/pen/WNQyvBX
+
+https://www.alura.com.br/imersao-css/aula01-css-pagina-pessoal?utm_campaign=imersao_hipsterscss_aula_01&utm_medium=email&utm_source=RD+Station
