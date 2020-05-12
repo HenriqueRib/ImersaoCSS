@@ -11,6 +11,21 @@ body {
 	font-family: Arial;
 }
 
+/*Para esses estilos seem carregados eles precisam ter pelo menos 400 px*/
+@media (min-width: 400px){
+	body {
+		font-size: 15px;
+	}
+}
+
+
+/*Para esses estilos seem carregados eles precisam ter pelo menos 400 px*/
+@media (min-width: 600px){
+	body {
+		font-size: 18px;
+	}
+}
+
 header{
 	height: 100vh;
 	display: flex;
