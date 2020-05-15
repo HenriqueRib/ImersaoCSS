@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
+	<title>Henrique Ribeiro</title>
 	<meta charset="utf-8">
 	<meta name="viewport"content="width=device=width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="shortcut icon" href="imagens/cv.png" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
-	<title>Henrique Ribeiro</title>
+	
+	<!-- Fontawesome CSS -->
+    <script src="https://kit.fontawesome.com/84b4a4101c.js"></script>
 </head>
 <body>
-	<header>
-	 <nav class="menu">
-	    <ul>
-	      <li><a href="#">Sobre</a></li>
-	      <li><a href="#">Portfólio</a></li>
-	      <li><a href="#">Contato</a></li>
-	    </ul>
-	  </nav>
-	  <div>
-		  <h1 class="site-title">Henrique Ribeiro Moreira</h1>
-		  <h2 class="site-subtitle">Software Developer</h2>
-	  </div>
-	</header>
-	<section class="portifolio">
-		<h2>Portfólio</h2>
-		<div class="grid">
-			<figure>
-				<img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-				<figcaption>eCommerce</figcaption>
-			</figure>
-			<figure>
-				<img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-				<figcaption>Mobile</figcaption>
-			</figure>
-			<figure>
-				<img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-				<figcaption>Web design</figcaption>
-			</figure>
-			<figure class="projeto">
-				<img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
-				<figcaption>Projetos pessoais</figcaption>
-			</figure>
-		</div>
-	</section>
-</body>	
+  <header class="header">
+    <input type="checkbox" class="menu-btn" id="menu-btn">
+    <label for="menu-btn" class="menu-icon"><span class="navicon"></span> </label>
+    <nav>
+      <ul class="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portifolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+   
+  </header>
+   <section id="sobre" class="section-welcome">
+    <div class="titles">
+      <h1 class="site-title">Henrique Ribeiro Moreira</h1>
+	  <marquee behavior="alternate" width="600px"><h2 class="site-subtitle">Software Developer</h2></marquee>
+    </div>
+  </section>
+
+  <section id="portifolio" class="section-portifolio">
+    <div class="section-portifolio-title">
+      <h2 class="site-subtitle">Portfólio</h2>
+    </div>
+    <div class="portifolio-img">
+      <figure>
+        <a href="" target="_blank"><img class="img-portfolio" src="imagens/1.png" alt="1 web site desenvolvido"></a>
+        <figcaption>1 web-site</figcaption>
+      </figure>
+      <figure>
+        <a href="" target="_blank"><img class="img-portfolio" src="imagens/2.png" alt="2 web site desenvolvido"></a>
+        <figcaption>2 web-site</figcaption>
+      </figure>
+      <figure>
+        <a href="https://henriquerib.github.io/hsystem/" target="_blank"><img class="img-portfolio" src="imagens/3.png" alt="3 web site desenvolvido"></a>
+        <figcaption>3 web-site</figcaption>
+      </figure>
+      <figure>
+        <a href="https://henriquerib.github.io/hsystem/HsystemP.html" target="_blank"><img class="img-portfolio" src="imagens/4.png" alt="Primeiro software que desenvolvi"></a>
+        <figcaption>Projetos</figcaption>
+      </figure>
+    </div>
+  </section>
+  
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/HenriqueRib">
+        <i class="fab fa-github"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/Henri1q2">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a target="_blank" href="http://linkedin.com/in/henrique-ribeiro-87245215b">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:ribeiro.henriquem@gmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </section>
+</body>
 </html>

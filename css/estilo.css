@@ -1,129 +1,277 @@
 /*soft reset css*/
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Audiowide', cursive;
+    font-size: 10px;
+}
+
 body {
-	background-image:url(https://opmax.com.br/wp-content/uploads/2018/01/azul-degrade.jpg);
-	background-size: auto 100vh; 
-	height: 100vh;
-	font-family: 'Audiowide', cursive;
+    height: 100vh;
+    font-family: 'Audiowide', cursive;
+    background-image:url(https://www.ppi-multitask.com.br/wp-content/uploads/2019/03/Fundo-Azul.jpg);
+    background-size: auto 100vh; 
 }
 
 /*Para esses estilos seem carregados eles precisam ter pelo menos 400 px*/
-@media (min-width: 400px){
-	body {
-		font-size: 15px;
-	}
+@media (min-width: 400px) {
+    body {
+        font-size: 1.5rem;
+    }
+}
+/*Para esses estilos seem carregados eles precisam ter pelo menos 700 px*/
+@media (min-width: 700px) {
+    body {
+        font-size: 3rem;
+    }
+}
+.titles{
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  transition: all 2s;
+  animation: 2s linear 2s animacao-titulo forwards;
+  position: static;
+}
+@keyframes animacao-titulo{
+  0%{
+
+  }
+  100%{
+    transform: scale(1) translate(0);
+    opacity: 1;
+  }
 }
 
 
-/*Para esses estilos seem carregados eles precisam ter pelo menos 400 px*/
-@media (min-width: 600px){
-	body {
-		font-size: 18px;
-	}
+.header {
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    
+  }
+
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    color: white;
+    font-size: .7em;
+    text-decoration: none;
+  }
+
+.header li a:hover,
+.header .menu-btn:hover {
+ background-image:url(https://opmax.com.br/wp-content/uploads/2018/01/azul-degrade.jpg);
 }
 
-header{
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
 
+  /* menu */
+
+.header nav .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+
+  /* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+
+  .header .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
 
-.menu {
-	background-color: white;
-	position: fixed;
-	top: 0;
-	width: 100vw;
+.header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+  /* menu btn */
+
+.header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ nav .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header nav .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 }
 
-.menu li {
-	list-style: none;
+/* Body da página */
+
+.section-welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url(https://www.ppi-multitask.com.br/wp-content/uploads/2019/03/Fundo-Azul.jpg);
+   
 }
 
-.menu ul {
-	display: flex;
-	justify-content: space-around;
-}
-.menu a {
-	display: block;
-	padding: 10px 20px;
-}
-
-a {
-	color: teal;
-	text-decoration: none;
-}
-a:hover{
-	text-decoration: underline;
-}
-.site-subtitle,
 .site-title{
-	color: whitesmoke;
-	text-align:center;
-	font-family: 'Audiowide', cursive;
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
 }
-
 .site-subtitle{
-	font-style: italic;
-	font-family: 'Barlow Condensed', sans-serif;
-	line-height: 1.8em;
-}
-.portifolio {
-	padding: 2em;
-	height: 100vh;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.7em;
 }
 
-.portifolio .grid {
-	display: grid;
-	gap: 2em;
-} 
-
-@media (min-width: 560px){
-
-.portifolio .grid {
-	grid-template-columns:240px 240px; 
-	justify-content: center;
-} 
+.section-portifolio .site-subtitle {
+    margin: 0 auto 6rem auto;
+    font-style: italic;
+    max-width: 240px;
+    border-bottom: 0.2rem solid #f0f0f0;
+    color: white;
 
 }
 
-@media (min-width: 880px){
-
-.portifolio .grid {
-	grid-template-columns: 240px 240px 240px; 
-	align-content: center;
-	justify-content: center;
-	height: 80vh
-} 
+.section-portifolio {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-image:url(https://www.ppi-multitask.com.br/wp-content/uploads/2019/03/Fundo-Azul.jpg);
 }
 
-@media (min-width: 1250px){
 
-.portifolio .grid {
-	grid-template-columns: repeat(4, 240px); 
-	align-content: center;
-	justify-content: center;
-	height: 45vh
-} 
+.portifolio-img {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+   
 }
 
-.portifolio figure {
-	text-align: center;
-}
+@media (max-width: 500px) {
+    .section-portifolio {
+        padding: 6rem 1rem;
+    }
 
-.portifolio h2{
-	font-family: 'Barlow Condensed', sans-serif;
-	margin-bottom: 1.5em;
-	font-size: 2em;
+    .portifolio-img {
+        grid-template-columns: 1fr;
+    }
 }
 
 .img-portfolio {
-	height: 180px;
-  	width: 180px;
-  	border-radius:15%;
+    height: calc(100% - 3.9rem);
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.portifolio-img img:hover {
+    transform: scale(1.3);
+    transition: all 0.4s ease-in;
+} 
+
+figcaption {
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+.contato{
+    min-height: 100vh;
+    padding: 10rem 2rem;
+    text-align: center;
+    margin-top: 50px;
+    color: whitesmoke;
+}
+
+.contato h2{
+    margin: 0 auto 6rem auto;
+    font-style: italic;
+    max-width: 240px;
+    border-bottom: 0.2rem solid #f0f0f0;
+}
+.contato .icons{
+    padding: 17rem 2rem;
+}
+.contato a{
+    color: whitesmoke;
+    font-size: 7rem;
+    text-decoration: none;
+    margin-right: 15px;
 }
